@@ -1,0 +1,144 @@
+.intro {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .text-content {
+    flex: 1;
+  }
+  
+  .text-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .text-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    color: #dea330;
+  }
+  
+  .text-content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #666;
+  }
+  
+  .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(222, 163, 48, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-image:hover {
+    transform: translateY(-10px);
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .portfolio-btn, .hire-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    border: none;
+  }
+  
+  .portfolio-btn {
+    background: #dea330;
+    color: white;
+    border: 2px solid #dea330;
+  }
+  
+  .hire-btn {
+    background: transparent;
+    color: #000;
+    border: 2px solid #dea330;
+  }
+  
+  .portfolio-btn:hover {
+    background: #c28b1e;
+    transform: translateY(-3px);
+  }
+  
+  .hire-btn:hover {
+    background: #dea330;
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 968px) {
+    .intro-content {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 30px;
+    }
+  
+    .text-content h1 {
+      font-size: 28px;
+    }
+  
+    .text-content h2 {
+      font-size: 36px;
+    }
+  
+    .text-content p {
+      font-size: 20px;
+    }
+  
+    .cta-buttons {
+      justify-content: center;
+    }
+  
+    .profile-image {
+      max-width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cta-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .portfolio-btn, .hire-btn {
+      width: 100%;
+      padding: 12px 24px;
+      font-size: 16px;
+    }
+  
+    .profile-image {
+      max-width: 100%;
+    }
+  }

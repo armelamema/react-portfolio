@@ -1,0 +1,207 @@
+/* Main Container Styles */
+.portfolio-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.portfolio-section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Grid Layout */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 20px 0;
+}
+
+/* Portfolio Item Styles */
+.portfolio-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: #f5f5f5;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+}
+
+/* Image Container and Image Styles */
+.portfolio-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Specific Image Styles */
+.julia-image {
+  object-position: center 20%;
+}
+
+.edis-image {
+  object-position: center center;
+}
+
+/* Hover Effects */
+.portfolio-item:hover .portfolio-image {
+  transform: scale(1.1);
+}
+
+/* Overlay Styles */
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(222, 163, 48, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* Overlay Content Styles */
+.portfolio-overlay h3 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 15px;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+  font-weight: 500;
+}
+
+.portfolio-overlay p {
+  color: white;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  transform: translateY(20px);
+  transition: transform 0.3s ease 0.1s;
+  text-align: center;
+  padding: 0 20px;
+  opacity: 0.9;
+}
+
+/* Button Styles */
+.view-project-btn {
+  background: white;
+  color: #dea330;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  transform: translateY(20px);
+  transition: all 0.3s ease 0.2s;
+  border: 2px solid transparent;
+}
+
+.view-project-btn:hover {
+  background: transparent;
+  color: white;
+  border-color: white;
+  transform: translateY(-3px);
+}
+
+/* Animation for Overlay Content */
+.portfolio-item:hover .portfolio-overlay > * {
+  transform: translateY(0);
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 968px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .portfolio-section {
+    padding: 40px 20px;
+  }
+
+  .portfolio-overlay h3 {
+    font-size: 22px;
+  }
+
+  .portfolio-overlay p {
+    font-size: 15px;
+  }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 580px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .portfolio-section {
+    padding: 30px 15px;
+  }
+
+  .portfolio-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .portfolio-overlay h3 {
+    font-size: 20px;
+  }
+
+  .portfolio-overlay p {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .view-project-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .portfolio-item {
+    aspect-ratio: 3/2;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Page Transition */
+.page-transition {
+  animation: fadeIn 0.6s ease-out;
+}
